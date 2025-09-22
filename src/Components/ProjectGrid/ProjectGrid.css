@@ -1,0 +1,133 @@
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+  gap: 15px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.filter-buttons p {
+  font-size: 1.3rem;
+}
+
+.filter-buttons button {
+  position: relative;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  color: #96f6ff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  outline: none;
+}
+
+.filter-buttons button:hover {
+  color: #905aff;
+}
+
+.filter-buttons button:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #905aff;
+  position: absolute;
+  bottom: -4px;
+  left: 35%;
+}
+
+.ProjectGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  min-height: 100vh;
+  padding: 7rem;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.large-card {
+  grid-column: span 2;
+  grid-row: span 2;
+  height: 81%;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+@media (max-width: 1280px) {
+  .ProjectGrid {
+    gap: 2rem;
+    padding: 5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ProjectGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem;
+  }
+
+  .filter-buttons p {
+    font-size: 1rem;
+  }
+
+  .filter-buttons button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .ProjectGrid {
+    display: flex;
+    gap: 2rem;
+    padding: 4rem;
+    flex-direction: column;
+  }
+
+  .filter-buttons{
+    gap: 0;
+  }
+
+  .filter-buttons button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .ProjectGrid {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  .filter-buttons button {
+    font-size: 1rem;
+  }
+}

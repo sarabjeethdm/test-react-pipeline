@@ -1,0 +1,274 @@
+.Skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+.Skill-heading {
+  font-size: 4.2rem;
+  margin-bottom: 50px;
+  margin-top: -90px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.expertise-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: transparent;
+}
+
+.expertise-card {
+  background: transparent;
+  border: 1px solid whitesmoke;
+  width: 430px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  padding: 2.7rem;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.expertise-head {
+  display: flex;
+  gap: 1.7rem;
+}
+
+.icon {
+  height: 4rem;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.vl-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.hh {
+  color: rgb(255, 255, 255, 0.4);
+  margin: 3px;
+}
+
+.vl {
+  border-left: 3px solid rgb(255, 255, 255, 0.4);
+  height: auto;
+  margin-left: 15px;
+}
+
+.vl-container p {
+  font-size: 1.2rem;
+  padding: 7px;
+}
+
+.highlight.blue {
+  display: inline;
+  background-image: linear-gradient(
+    to right,
+    rgb(93, 81, 255),
+    rgb(93, 81, 255)
+  );
+  background-size: 100% 30%;
+  background-repeat: no-repeat;
+  background-position: 0 90%;
+}
+
+.highlight.pink {
+  display: inline;
+  background-image: linear-gradient(
+    to right,
+    rgb(250, 97, 255),
+    rgb(250, 97, 255)
+  );
+  background-size: 100% 30%;
+  background-repeat: no-repeat;
+  background-position: 0 90%;
+}
+
+.highlight.orange {
+  display: inline;
+  background-image: linear-gradient(
+    to right,
+    rgb(250, 88, 88),
+    rgb(250, 88, 88)
+  );
+  background-size: 100% 30%;
+  background-repeat: no-repeat;
+  background-position: 0 90%;
+}
+
+.skill-back {
+  position: absolute;
+  background-blend-mode: multiply;
+  filter: opacity(0.2);
+  background: transparent;
+  top: 68vh;
+  z-index: 1;
+  width: 44%;
+  height: 400px;
+}
+
+@media (max-width: 1280px) {
+  .Skill-heading {
+    font-size: 3.2rem;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  .expertise-card {
+    width: 340px;
+    padding: 2rem;
+  }
+
+  .vl-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .vl-container p {
+    font-size: 1rem;
+    padding: 4px;
+  }
+
+  .hh {
+    color: rgb(255, 255, 255, 0.4);
+    margin: 2px;
+  }
+
+  .vl {
+    border-left: 2.5px solid rgb(255, 255, 255, 0.4);
+  }
+
+  .skill-back {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Skill-heading {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    margin-top: 70px;
+  }
+
+  .expertise-card {
+    width: 440px;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .vl-container p {
+    font-size: 1rem;
+    padding: 4px;
+  }
+
+  .skill-back {
+    width: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  .Skill-heading {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+
+  .expertise-card {
+    width: 440px;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .vl-container p {
+    font-size: 1rem;
+    padding: 4px;
+  }
+
+  .icon {
+    height: 2.7rem;
+    margin-top: 7px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .skill-back {
+    top: 90vh;
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .Skills {
+    height: auto;
+  }
+
+  .Skill-heading {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+
+  .expertise-cards {
+    gap: 1rem;
+  }
+
+  .expertise-card {
+    width: 320px;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .vl-container p {
+    font-size: 1rem;
+    padding: 4px;
+  }
+
+  .icon {
+    height: 2.4rem;
+    margin-top: 5px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .skill-back {
+    top: 115vh;
+    width: 90%;
+  }
+}

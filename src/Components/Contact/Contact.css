@@ -1,0 +1,240 @@
+.Contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(22, 45, 123);
+  background: linear-gradient(
+    360deg,
+    rgb(9, 9, 30) 10%,
+    rgba(26, 25, 29, 1) 100%
+  );
+}
+
+.Contact-left {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  margin: 2rem;
+  gap: 2rem;
+  background: transparent;
+}
+
+.Contact-right {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  width: 40vw;
+  gap: 3rem;
+  background: transparent;
+}
+
+.email {
+  font-size: 2.3rem;
+  font-weight: 500;
+  background: transparent;
+  display: inline;
+  background-image: linear-gradient(
+    to right,
+   rgb(106, 0, 255),
+   rgb(106, 0, 255)
+  );
+  background-size: 100% 30%;
+  background-repeat: no-repeat;
+  background-position: 0 90%;
+}
+
+a {
+  background: transparent;
+}
+
+.linkedin {
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(213, 194, 240);
+  background: transparent;
+}
+
+.github {
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgb(213, 194, 240);
+  background: transparent;
+}
+
+.Contact-head {
+  font-size: 3rem;
+  font-weight: 700;
+  background: transparent;
+}
+
+.Contact-body {
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: transparent;
+}
+
+@media (max-width: 1280px) {
+  .Contact-left {
+    width: 30vw;
+    margin: 2rem;
+    gap: 2rem;
+  }
+
+  .Contact-right {
+    margin: 2rem;
+    width: 40vw;
+    gap: 3rem;
+  }
+
+  .email {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .linkedin {
+    font-size: 1.8rem;
+  }
+
+  .github {
+    font-size: 1.8rem;
+  }
+
+  .Contact-head {
+    font-size: 2.5rem;
+  }
+
+  .Contact-body {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Contact {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .Contact-left {
+    width: 70vw;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    gap: 1rem;
+  }
+
+  .Contact-right {
+    margin: 2rem;
+    width: 70vw;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .email {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .linkedin {
+    font-size: 1.8rem;
+  }
+
+  .github {
+    font-size: 1.8rem;
+  }
+
+  .Contact-head {
+    font-size: 2.5rem;
+  }
+
+  .Contact-body {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 800px) {
+  .Contact {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .Contact-left {
+    width: 70vw;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    gap: 1rem;
+  }
+
+  .Contact-right {
+    margin: 2rem;
+    width: 70vw;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .email {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .linkedin {
+    font-size: 1.5rem;
+  }
+
+  .github {
+    font-size: 1.5rem;
+  }
+
+  .Contact-head {
+    font-size: 2rem;
+  }
+
+  .Contact-body {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .Contact-left {
+    width: 70vw;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    gap: 1rem;
+  }
+
+  .Contact-right {
+    margin: 2rem;
+    width: 70vw;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .email {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .linkedin {
+    font-size: 1.2rem;
+  }
+
+  .github {
+    font-size: 1.2rem;
+  }
+
+  .Contact-head {
+    font-size: 1.5rem;
+  }
+
+  .Contact-body {
+    font-size: 0.9rem;
+  }
+}

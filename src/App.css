@@ -1,0 +1,22 @@
+.App {
+  height: 100vh;
+  overflow-y: auto;
+  /*height: calc(100vh - 65px);*/
+  /*top: 65px;*/
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.App::-webkit-scrollbar {
+	 display: none;
+}
+
+.App > * {
+	 width: 100vw;
+	 /*height: calc(100vh - 65px);*/
+	 /*scroll-snap-align: start;*/
+}
+ 
