@@ -15,14 +15,17 @@ steps:
     versionSpec: '20.x'
   displayName: 'Install Node.js'
 
+
 - script: |
     npm install
     npm run build
-  displayName: 'npm install and build'
+    cd dist
+    zip -r ../viteapp.zip .
+  displayName: 'npm install, build, and zip'
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'dist'
+    PathtoPublish: 'viteapp.zip'
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
@@ -31,4 +34,4 @@ steps:
     azureSubscription: 'HDM Dev US(64343ba9-5755-4a92-93f7-61dc459822c3)'
     appType: 'webAppLinux'
     appName: 'test-react-app'
-    package: '$(System.DefaultWorkingDirectory)/**/drop'
+    package: '$(Pipeline.Workspace)/drop/viteapp.zip'
