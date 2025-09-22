@@ -20,10 +20,15 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'dist'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'HDM Dev US(64343ba9-5755-4a92-93f7-61dc459822c3)'
     appType: 'webAppLinux'
     appName: 'test-react-app'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    runtimeStack: 'NODE|22-lts'
+    package: '$(System.DefaultWorkingDirectory)/**/drop'
