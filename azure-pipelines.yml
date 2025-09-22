@@ -23,11 +23,10 @@ steps:
     zip -r ../viteapp.zip .
   displayName: 'npm install, build, and zip'
 
-- task: PublishBuildArtifacts@1
+- task: DownloadPipelineArtifact@2
   inputs:
-    PathtoPublish: 'viteapp.zip'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    artifactName: 'drop'
+    path: '$(Pipeline.Workspace)'
 
 - task: AzureWebApp@1
   inputs:
