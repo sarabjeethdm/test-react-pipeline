@@ -10,27 +10,23 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+# Install Node.js
 - task: NodeTool@0
   inputs:
     versionSpec: '20.x'
   displayName: 'Install Node.js'
 
-
+# Install deps and build Vite app
 - script: |
     npm install
     npm run build
-    cd dist
-    zip -r ../viteapp.zip .
-  displayName: 'npm install, build, and zip'
+  displayName: 'npm install and build'
 
-- task: DownloadPipelineArtifact@2
-  inputs:
-    artifactName: 'drop'
-    path: '$(Pipeline.Workspace)'
-
+# Deploy dist/ folder directly to Azure Web App
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'HDM Dev US(64343ba9-5755-4a92-93f7-61dc459822c3)'
     appType: 'webAppLinux'
     appName: 'test-react-app'
-    package: '$(Pipeline.Workspace)/drop/viteapp.zip'
+    package: '$(System.DefaultWorkingDirectory)/dist'
+
