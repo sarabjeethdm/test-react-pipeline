@@ -27,4 +27,3 @@ steps:
     appName: 'test-react-app'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     runtimeStack: 'NODE|22-lts'
-    startUpCommand: 'pm2 serve /home/site/wwwroot --no-daemon --spa'
