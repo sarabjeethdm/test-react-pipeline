@@ -11,11 +11,11 @@ const Home = () => {
         <hr />
         <h2 className="small-text">Motivated</h2>
         <h1 className="big-text">Full Stack Software Engineer</h1>
-        <p className="micro-text">
-          Motivated and detail-oriented Full Stack Developer, passionate about
-          leveraging technology to build scalable solutions and solve complex
-          challenges through innovation and creativity.
-        </p>
+        {/* <p className="micro-text"> */}
+        {/*   Motivated and detail-oriented Full Stack Developer, passionate about */}
+        {/*   leveraging technology to build scalable solutions and solve complex */}
+        {/*   challenges through innovation and creativity. */}
+        {/* </p> */}
       </div>
       <div className="down-arrow"></div>
     </div>
